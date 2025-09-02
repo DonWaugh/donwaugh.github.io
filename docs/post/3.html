@@ -11,7 +11,7 @@
 <meta property="og:title" content="哪吒监控">
 <meta property="og:description" content="小朋友开学了。">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://think.chungyu.com/post/na-zha-jian-kong.html">
+<meta property="og:url" content="https://think.chungyu.com/post/3.html">
 <meta property="og:image" content="https://blog.chungyu.com/d.jpg">
 <title>哪吒监控</title>
 
@@ -76,6 +76,9 @@ DARME那边有点进展，下周估计要去趟西安。<br>
 Crypto项目也需要跟进一下。币圈一日，人间一年啊！</p></div>
 <div style="font-size:small;margin-top:8px;float:right;">转载请注明出处</div>
 
+<button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
+<div class="comments" id="comments"></div>
+
 </div>
     <div id="footer"><div id="footer1">Copyright © <span id="copyrightYear"></span> <a href="https://think.chungyu.com">东哥的思考</a></div>
 <div id="footer2"><span id="filingNum"><a href="https://beian.miit.gov.cn/" target="_blank">東ICP备20250001号</a> • </span>
@@ -111,6 +114,39 @@ cmButton=document.getElementById("cmButton");
     cmButton.appendChild(span);
 
 
+function openComments(){
+    cm=document.getElementById("comments");
+    cmButton=document.getElementById("cmButton");
+    cmButton.innerHTML="loading";
+    span=document.createElement("span");
+    span.setAttribute("class","AnimatedEllipsis");
+    cmButton.appendChild(span);
+
+    script=document.createElement("script");
+    script.setAttribute("src","https://utteranc.es/client.js");
+    script.setAttribute("repo","DonWaugh/donwaugh.github.io");
+    script.setAttribute("issue-term","title");
+    
+    script.setAttribute("theme","dark-blue");
+    
+    script.setAttribute("crossorigin","anonymous");
+    script.setAttribute("async","");
+    cm.appendChild(script);
+
+    int=self.setInterval("iFrameLoading()",200);
+}
+
+function iFrameLoading(){
+    var utterances=document.getElementsByClassName('utterances');
+    if(utterances.length==1){
+        if(utterances[0].style.height!=""){
+            utterancesLoad=1;
+            int=window.clearInterval(int);
+            document.getElementById("cmButton").style.display="none";
+            console.log("utterances Load OK");
+        }
+    }
+}
 
 
 
