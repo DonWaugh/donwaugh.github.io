@@ -2,5 +2,22 @@
     "title":"东哥的思考",
     "subTitle":"单纯记录一下个人的想法",
     "avatarUrl":"https://blog.chungyu.com/d.jpg",
-    "GMEEK_VERSION":"last"
+    "GMEEK_VERSION":"last",
+    "homeUrl":"https://think.chungyu.com",
+    "email":"donwaugh@gmail.com",
+    "startSite":"09/02/2025",
+    "filingNum":"東ICP备20250001号",
+    "onePageListNum":25,
+    "commentLabelColor":"#006b75",
+    "yearColorList":["#bc4c00", "#0969da", "#1f883d", "#A333D0"],
+    "i18n":"CN",
+    "UTC":8,
+    "themeMode":"fix",
+    "dayTheme":"dark",
+    "nightTheme":"dark-blue",
+    "urlMode":"pinyin",
+    "showPostSource":1,
+    "rssSplit":"sentence",
+    "bottomText":"转载请注明出处",
+    "needComment":0
 }
